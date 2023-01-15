@@ -1,0 +1,211 @@
+// custom fonts add
+@font-face {
+  font-family: "Thicccboi";
+  src: url("../fonts/THICCCBOI-Regular.woff2") format("woff2");
+}
+
+// colors variables
+$white: #ffffff;
+$black: #0e121e;
+$dark: #717379;
+$primary: #ff344c;
+$secondary: #1f3584;
+$transition: 0.3s;
+
+// reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+body {
+  font-family: "Thicccboi";
+  font-size: 18px;
+  line-height: 1.6em;
+  font-weight: 500;
+}
+p {
+  color: $dark;
+}
+
+// common style
+.btn-primary {
+  cursor: pointer;
+  background-color: $primary;
+  color: $white;
+  border: 1px solid transparent;
+  padding: 14px 24px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: center;
+  transition: $transition;
+
+  &:hover {
+    background-color: transparent;
+    color: $primary;
+    border-color: $primary;
+  }
+}
+
+.btn-secondary {
+  cursor: pointer;
+  background-color: transparent;
+  color: $white;
+  border: 1px solid $white;
+  padding: 14px 24px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: center;
+  transition: $transition;
+
+  &:hover {
+    background-color: $primary;
+  }
+}
+
+// grid template
+.container {
+  max-width: 1268px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+
+// start header area
+header {
+  background-color: $secondary;
+  background-image: url("../images/home-hero-pattern-politician-bg.svg");
+  background-size: cover;
+  background-position: center;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 0;
+
+    .navbar__area {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+
+        a {
+          color: $white;
+          font-size: 18px;
+          font-weight: bold;
+          transition: $transition;
+
+          &:hover {
+            color: $primary;
+          }
+
+          span {
+            color: $white;
+          }
+        }
+      }
+    }
+    .join_our_community {
+      button:last-child {
+        margin-left: 1rem;
+      }
+    }
+  }
+  // banner
+  .banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-column-gap: 1rem;
+    padding: 80px 0;
+
+    .banner__content {
+      color: $white;
+      h1 {
+        font-size: 114px;
+        line-height: 1em;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 32px;
+        color: $white;
+      }
+      button {
+        font-size: 24px;
+        padding: 24px 36px;
+      }
+      button:last-child {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
